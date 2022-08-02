@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_splashFragment_to_onBoardingFragment"
+            app:destination="@id/onBoardingFragment"
+            app:popUpTo="@id/main_graph" />
+        <action
+            android:id="@+id/action_splashFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.onboarding.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onBoardingFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.mainscreen.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_restDayFragment"
+            app:destination="@id/restDayFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_trainingStartFragment"
+            app:destination="@id/trainingStartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restDayFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.restscreen.RestDayFragment"
+        android:label="fragment_rest_day"
+        tools:layout="@layout/fragment_rest_day" >
+        <argument
+            android:name="restEntity"
+            app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$RestDay" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingStartFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.training.TrainingStartFragment"
+        android:label="fragment_training_start"
+        tools:layout="@layout/fragment_training_start" >
+        <argument
+            android:name="trainingDay"
+            app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$TrainingDay" />
+    </fragment>
+</navigation>

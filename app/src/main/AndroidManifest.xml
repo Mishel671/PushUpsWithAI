@@ -3,8 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ru.dzyubamichael.pushupswithai">
 
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera"/>
+
     <application
         android:allowBackup="true"
+        android:name=".TrainingApp"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -14,7 +20,7 @@
         android:theme="@style/Theme.PushUpsWithAI"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
