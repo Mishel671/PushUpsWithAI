@@ -14,7 +14,8 @@ fun TrainingDayEntity.mapToDbModel(level: TrainingLevel): TrainingDbModel {
                 trainingLevel = level,
                 countOfWeek = entity.countOfWeek,
                 countOfExercise = null,
-                isPassed = false,
+                isPassed = null,
+                day = null
             )
         }
         is TrainingDayEntity.TrainingDay -> {
@@ -24,7 +25,8 @@ fun TrainingDayEntity.mapToDbModel(level: TrainingLevel): TrainingDbModel {
                 trainingLevel = level,
                 countOfExercise = entity.countOfExercise,
                 isPassed = entity.isPassed,
-                countOfWeek = null,
+                day = entity.day,
+                countOfWeek = null
             )
         }
         is TrainingDayEntity.RestDay -> {
@@ -33,8 +35,9 @@ fun TrainingDayEntity.mapToDbModel(level: TrainingLevel): TrainingDbModel {
                 type = TrainingDbModel.Type.REST_DAY,
                 isPassed = entity.isPassed,
                 trainingLevel = level,
+                day = entity.day,
                 countOfExercise = null,
-                countOfWeek = null,
+                countOfWeek = null
             )
         }
     }
@@ -53,12 +56,14 @@ fun TrainingDbModel.mapToEntity(): TrainingDayEntity {
             return TrainingDayEntity.TrainingDay(
                 id = entity.id,
                 countOfExercise = entity.countOfExercise!!,
+                day = entity.day!!,
                 isPassed = entity.isPassed!!
             )
         }
         TrainingDbModel.Type.REST_DAY -> {
             return TrainingDayEntity.RestDay(
                 id = entity.id,
+                day = entity.day!!,
                 isPassed = entity.isPassed!!
             )
         }

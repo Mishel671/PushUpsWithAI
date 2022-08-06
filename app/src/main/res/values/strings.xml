@@ -1,11 +1,22 @@
 <resources>
     <string name="app_name">PushUpsWithAI</string>
     <string name="grant_permission">Please, granted permission.</string>
-    <string name="week">Неделя 1</string>
+    <string name="splash_title_push">PUSH\u0020</string>
+    <string name="splash_title_ups">UPS</string>
+    <string name="week_title">Неделя %s</string>
+    <string name="day_title">День %s-й </string>
+    <string name="training_description">%s подход - %s отжимания\n</string>
     <string name="tab_easy_level">Новичок</string>
     <string name="tab_medium_level">Средний</string>
     <string name="tab_hard_level">Продвинутый</string>
+    <string name="camera_screen_title">Автоматический подсчет упражнений.</string>
+    <string name="camera_screen_description">Вы делаете упражнения, а приложение с помощью машинного обучения подсчитает всё за вас.</string>
+    <string name="button_next">Далее</string>
+    <string name="tutorial_push_up">Перед началом необходимо определить ваш уровень подготовки. Для этого отожмитесь от пола столько раз, сколько сможете.
+        Если вы выполнили до 5 отжиманий, то ваш уровень «Новичок». Если 6–10 отжиманий, то «Средний». Если 11–20, то уровень «Продвинутый».</string>
+    <string name="complete">Выполнить</string>
+    <string name="rest_day_title">Можно отдохнуть!</string>
+    <string name="rest_day_description">Вашим мышцам нужно время восстановиться.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
 </resources>

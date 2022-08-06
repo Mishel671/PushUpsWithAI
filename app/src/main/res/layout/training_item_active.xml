@@ -8,8 +8,9 @@
     android:layout_marginTop="10dp"
     android:layout_marginRight="20dp"
     android:layout_marginBottom="10dp"
-    android:background="@drawable/training_and_rest_item_bg"
+    android:background="@drawable/training_and_rest_active_item_bg"
     android:orientation="vertical">
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -23,8 +24,8 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/ubuntu_regular"
+            android:textColor="@color/white"
             android:textSize="18sp"
-            android:textColor="@color/item_list_text_color"
             tools:text="День 1-й" />
 
         <ImageView
@@ -34,7 +35,7 @@
             android:layout_gravity="right|center_vertical"
             android:layout_marginRight="15dp"
             android:src="@drawable/ic_arrow"
-            app:tint="@color/item_list_text_color" />
+            app:tint="@color/white" />
     </FrameLayout>
 
 
@@ -46,9 +47,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/ubuntu_regular"
+        android:textColor="@color/white"
         android:textSize="16sp"
-        android:textColor="@color/item_list_text_color"
         android:visibility="gone"
-        app:layout_constraintTop_toBottomOf="parent"
         tools:text="Help" />
 </LinearLayout>

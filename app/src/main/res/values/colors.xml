@@ -7,4 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="progress_bar_background">#465478</color>
+    <color name="background_color">#2F2F30</color>
+    <color name="background_light_color">#414142</color>
+    <color name="blue_light">#3FBCED</color>
+    <color name="blue_middle">#4294e6</color>
+    <color name="blue_dark">#446FDF</color>
+    <color name="week_title">#FFFFFF</color>
+    <color name="training_rest_item_color">#B9B9B9</color>
+    <color name="green">#64E147</color>
+    <color name="green_light">#A5E170</color>
+    <color name="week_text_color">#EBEBEB</color>
+    <color name="item_list_text_color">#2D4555</color>
 </resources>

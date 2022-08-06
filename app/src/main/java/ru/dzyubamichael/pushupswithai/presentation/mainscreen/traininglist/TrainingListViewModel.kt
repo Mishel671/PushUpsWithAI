@@ -1,6 +1,7 @@
 package ru.dzyubamichael.pushupswithai.presentation.mainscreen.traininglist
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ru.dzyubamichael.pushupswithai.domain.GetTrainingByLevelListUseCase
@@ -16,4 +17,5 @@ class TrainingListViewModel @Inject constructor(
     fun getTrainingList(level: TrainingLevel):LiveData<List<TrainingDayEntity>>{
         return getTrainingByLevelListUseCase(level)
     }
+
 }

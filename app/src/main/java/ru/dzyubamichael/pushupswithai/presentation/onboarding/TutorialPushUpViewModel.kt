@@ -8,7 +8,7 @@ import ru.dzyubamichael.pushupswithai.domain.SaveFirstStartUseCase
 import javax.inject.Inject
 
 @HiltViewModel
-class OnBoardingViewModel @Inject constructor(
+class TutorialPushUpViewModel @Inject constructor(
     private val saveFirstStartUseCase: SaveFirstStartUseCase
 ): ViewModel() {
 

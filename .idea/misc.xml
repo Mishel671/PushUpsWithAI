@@ -4,21 +4,36 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/active_tab.xml" value="0.229" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/btn_complete_bg.xml" value="0.2295" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/inactive_dot.xml" value="0.1455" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/inactive_tab.xml" value="0.229" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/selected_tab.xml" value="0.1455" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/tab_icon_color.xml" value="0.1" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/tab_indicator_background.xml" value="0.1" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/tab_selector.xml" value="0.1455" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/tab_text_color.xml" value="0.123" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/training_and_rest__activeitem_bg.xml" value="0.1475" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/training_and_rest_active_item_bg.xml" value="0.2295" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/training_and_rest_item_active_bg.xml" value="0.1475" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/training_and_rest_item_bg.xml" value="0.1" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/training_detail_tem_selector.xml" value="0.1475" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/drawable/training_item.xml" value="0.137" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/active_training_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_camera_ai.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_main.xml" value="0.24322916666666666" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_on_boarding.xml" value="0.24322916666666666" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_rest_day.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_splash.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_training_camera.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_training_list.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_training_start.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/fragment_tutorial_push_up.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/passed_item.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/rest_item.xml" value="0.253125" />
-        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/training_item.xml" value="0.253125" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/rest_item_active.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/training_item.xml" value="0.152" />
+        <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/training_item_active.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/dzuba/AndroidStudioProjects/PushUpsWithAI/app/src/main/res/layout/week_item.xml" value="0.253125" />
       </map>
     </option>

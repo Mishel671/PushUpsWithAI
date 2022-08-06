@@ -1,5 +1,6 @@
 package ru.dzyubamichael.pushupswithai.data
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
 import ru.dzyubamichael.pushupswithai.data.database.TrainingDao
@@ -23,16 +24,24 @@ class TrainingRepositoryImpl @Inject constructor(
             }
         }
         AppPreferences.saveFirstStart()
+        Log.d("MainLog", "Save first start: ${AppPreferences.isFirstStart()}")
     }
 
     override fun getTrainingListByLevel(trainingLevel: TrainingLevel): LiveData<List<TrainingDayEntity>> {
         val listDbModelLiveData = trainingDao.getTrainingListByLevel(trainingLevel)
-        return Transformations.map(listDbModelLiveData){ listDbModel ->
+        return Transformations.map(listDbModelLiveData) { listDbModel ->
             listDbModel.map { dbModel ->
                 dbModel.mapToEntity()
             }
         }
     }
+
+
+    override suspend fun setPassedDay(id: Int) {
+        val dbModel = trainingDao.getItemById(id)
+        trainingDao.insertTrainingData(dbModel.copy(isPassed = true))
+    }
+
 
     override fun isFirstStart(): Boolean {
         return AppPreferences.isFirstStart()

@@ -9,43 +9,41 @@
         android:id="@+id/splashFragment"
         android:name="ru.dzyubamichael.pushupswithai.presentation.splash.SplashFragment"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash" >
-        <action
-            android:id="@+id/action_splashFragment_to_onBoardingFragment"
-            app:destination="@id/onBoardingFragment"
-            app:popUpTo="@id/main_graph" />
+        tools:layout="@layout/fragment_splash">
         <action
             android:id="@+id/action_splashFragment_to_mainFragment"
             app:destination="@id/mainFragment"
+            app:enterAnim="@anim/slide_enter_left"
+            app:exitAnim="@anim/slide_exit_left"
             app:popUpTo="@id/main_graph" />
-    </fragment>
-    <fragment
-        android:id="@+id/onBoardingFragment"
-        android:name="ru.dzyubamichael.pushupswithai.presentation.onboarding.OnBoardingFragment"
-        android:label="fragment_on_boarding"
-        tools:layout="@layout/fragment_on_boarding" >
         <action
-            android:id="@+id/action_onBoardingFragment_to_mainFragment"
-            app:destination="@id/mainFragment"
+            android:id="@+id/action_splashFragment_to_cameraAiFragment"
+            app:destination="@id/cameraAiFragment"
+            app:enterAnim="@anim/slide_enter_up"
+            app:exitAnim="@anim/slide_exit_up"
             app:popUpTo="@id/main_graph" />
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="ru.dzyubamichael.pushupswithai.presentation.mainscreen.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_restDayFragment"
-            app:destination="@id/restDayFragment" />
+            app:destination="@id/restDayFragment"
+            app:enterAnim="@anim/slide_enter_up"
+            app:popExitAnim="@anim/slide_exit_down" />
         <action
             android:id="@+id/action_mainFragment_to_trainingStartFragment"
-            app:destination="@id/trainingStartFragment" />
+            app:destination="@id/trainingStartFragment"
+            app:enterAnim="@anim/slide_enter_up"
+            app:popExitAnim="@anim/slide_exit_down" />
     </fragment>
     <fragment
         android:id="@+id/restDayFragment"
         android:name="ru.dzyubamichael.pushupswithai.presentation.restscreen.RestDayFragment"
         android:label="fragment_rest_day"
-        tools:layout="@layout/fragment_rest_day" >
+        tools:layout="@layout/fragment_rest_day">
         <argument
             android:name="restEntity"
             app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$RestDay" />
@@ -54,7 +52,44 @@
         android:id="@+id/trainingStartFragment"
         android:name="ru.dzyubamichael.pushupswithai.presentation.training.TrainingStartFragment"
         android:label="fragment_training_start"
-        tools:layout="@layout/fragment_training_start" >
+        tools:layout="@layout/fragment_training_start">
+        <argument
+            android:name="trainingDay"
+            app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$TrainingDay" />
+        <action
+            android:id="@+id/action_trainingStartFragment_to_preparationTrainingFragment"
+            app:destination="@id/preparationTrainingFragment"
+            app:enterAnim="@anim/slide_enter_left"
+            app:exitAnim="@anim/slide_exit_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraAiFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.onboarding.CameraAiFragment"
+        android:label="fragment_camera_ai"
+        tools:layout="@layout/fragment_camera_ai">
+        <action
+            android:id="@+id/action_cameraAiFragment_to_tutorialPushUpFragment"
+            app:destination="@id/tutorialPushUpFragment"
+            app:enterAnim="@anim/slide_enter_left"
+            app:exitAnim="@anim/slide_exit_left"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/tutorialPushUpFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.onboarding.TutorialPushUpFragment"
+        android:label="fragment_tutorial_push_up"
+        tools:layout="@layout/fragment_tutorial_push_up">
+        <action
+            android:id="@+id/action_tutorialPushUpFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:exitAnim="@anim/slide_exit_down"
+            app:popUpTo="@id/main_graph" />
+    </fragment>
+    <fragment
+        android:id="@+id/preparationTrainingFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.training.PreparationTrainingFragment"
+        android:label="fragment_preparation_training"
+        tools:layout="@layout/fragment_preparation_training">
         <argument
             android:name="trainingDay"
             app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$TrainingDay" />

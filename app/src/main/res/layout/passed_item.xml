@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="20dp"
@@ -16,16 +16,15 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:fontFamily="@font/ubuntu_regular"
-        android:text="День 2-й"
+        android:textSize="18sp"
         android:textColor="@color/item_list_text_color"
-        android:textSize="18sp" />
+        android:fontFamily="@font/ubuntu_regular"
+        tools:text="День 1-й" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_gravity="right|center_vertical"
         android:layout_marginRight="15dp"
-        android:src="@drawable/ic_rest"
-        app:tint="@color/blue_light" />
+        android:src="@drawable/ic_check_mark" />
 </FrameLayout>

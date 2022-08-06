@@ -22,8 +22,6 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
 
     private val viewModel: SplashViewModel by viewModels()
 
-    private val appPerms = arrayOf(Manifest.permission.CAMERA)
-
     private val activityResultLauncher: ActivityResultLauncher<Array<String>>
 
     init {
@@ -50,10 +48,14 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         super.onViewCreated(view, savedInstanceState)
         viewModel.launchNextScreen.observe(viewLifecycleOwner) {
             if (viewModel.isFirstStart()) {
-                startScreen(R.id.action_splashFragment_to_onBoardingFragment)
+                startScreen(R.id.action_splashFragment_to_cameraAiFragment)
             } else {
+                val appPerms = arrayOf(Manifest.permission.CAMERA)
                 activityResultLauncher.launch(appPerms)
             }
+        }
+        viewModel.loadingProgress.observe(viewLifecycleOwner) {
+            binding.progressLoading.progress = it
         }
 
     }

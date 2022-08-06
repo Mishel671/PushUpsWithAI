@@ -21,12 +21,19 @@ class SplashViewModel @Inject constructor(
     val launchNextScreen: LiveData<Unit>
         get() = _launchNextScreen
 
+    private val _loadingProgress = MutableLiveData<Int>()
+    val loadingProgress: LiveData<Int>
+        get() = _loadingProgress
+
     init {
         viewModelScope.launch {
             withContext(Dispatchers.IO) {
-                delay(2000)
+                for (i in 1..100) {
+                    delay(20)
+                    _loadingProgress.postValue(i)
+                }
+                _launchNextScreen.postValue(Unit)
             }
-            _launchNextScreen.value = Unit
         }
     }
 

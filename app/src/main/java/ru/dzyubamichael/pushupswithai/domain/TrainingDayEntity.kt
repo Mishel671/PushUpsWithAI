@@ -13,6 +13,7 @@ sealed class TrainingDayEntity {
 
     @Parcelize
     data class TrainingDay(
+        val day: Int,
         val countOfExercise: List<Int>,
         val isPassed: Boolean,
         var id: Int = UNDEFINED_ID
@@ -20,6 +21,7 @@ sealed class TrainingDayEntity {
 
     @Parcelize
     data class RestDay(
+        val day: Int,
         val isPassed: Boolean,
         var id: Int = UNDEFINED_ID
     ) : TrainingDayEntity(), Parcelable

@@ -4,10 +4,10 @@ import android.content.Context
 import android.content.SharedPreferences
 
 
-object AppPreferences {
+object AppPreferences{
 
     private const val APP_PREFERENCES_KEY = "preferences"
-    private const val FIRST_START_KEY = "first_start"
+    private const val FIRST_START_KEY = "firstStart"
 
     private lateinit var preferences: SharedPreferences
 
@@ -18,7 +18,7 @@ object AppPreferences {
     fun saveFirstStart() {
         preferences.edit()
             .putBoolean(FIRST_START_KEY, false)
-            .commit()
+            .apply()
     }
 
     fun isFirstStart(): Boolean {

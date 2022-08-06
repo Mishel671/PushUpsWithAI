@@ -20,6 +20,7 @@ data class TrainingDbModel (
     //Training day params
     val countOfExercise: List<Int>?,
     //Training day & rest day params
+    val day: Int?,
     val isPassed: Boolean?
 
 ) {
