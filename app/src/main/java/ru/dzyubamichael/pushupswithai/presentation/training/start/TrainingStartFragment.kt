@@ -1,4 +1,4 @@
-package ru.dzyubamichael.pushupswithai.presentation.training
+package ru.dzyubamichael.pushupswithai.presentation.training.start
 
 import android.os.Bundle
 import android.view.View
@@ -18,11 +18,20 @@ class TrainingStartFragment : Fragment(R.layout.fragment_training_start) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val exerciseAdapter = ExercisesAdapter(requireContext(), args.trainingDay.countOfExercise)
+        binding.rvExercises.adapter = exerciseAdapter
         binding.buttonContinue.setOnClickListener {
             findNavController().navigate(
-                TrainingStartFragmentDirections
-                    .actionTrainingStartFragmentToPreparationTrainingFragment(args.trainingDay))
+                TrainingStartFragmentDirections.actionTrainingStartFragmentToPreparationTrainingFragment(
+                    args.trainingDay,
+                    FIRST_EXERCISE
+                )
+            )
         }
     }
 
+
+    companion object {
+        private const val FIRST_EXERCISE = 0
+    }
 }

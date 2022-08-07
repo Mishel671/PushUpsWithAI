@@ -21,7 +21,7 @@ object TrainingDataInflate {
                             2, 3, 2, 2, 3
                         ),
                         day = 1,
-                        isPassed = true
+                        isPassed = false
                     ),
                     TrainingDayEntity.RestDay(
                         day = 2,

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background_color"
     tools:context=".presentation.restscreen.RestDayFragment">
 
     <LinearLayout
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/training_and_rest_active_item_bg"
+        android:background="@drawable/blue_gradient_corner_bg"
         android:fontFamily="@font/ubuntu_regular"
         android:stateListAnimator="@null"
         android:text="@string/complete"

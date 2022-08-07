@@ -7,7 +7,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginRight="20dp"
     android:layout_marginBottom="10dp"
-    android:background="@drawable/training_and_rest_item_bg">
+    android:background="@drawable/white_cornenr_bg">
 
     <TextView
         android:id="@+id/tvRest"

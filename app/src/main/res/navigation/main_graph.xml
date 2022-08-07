@@ -50,7 +50,7 @@
     </fragment>
     <fragment
         android:id="@+id/trainingStartFragment"
-        android:name="ru.dzyubamichael.pushupswithai.presentation.training.TrainingStartFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.training.start.TrainingStartFragment"
         android:label="fragment_training_start"
         tools:layout="@layout/fragment_training_start">
         <argument
@@ -92,6 +92,49 @@
         tools:layout="@layout/fragment_preparation_training">
         <argument
             android:name="trainingDay"
+            app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$TrainingDay" />
+        <action
+            android:id="@+id/action_preparationTrainingFragment_to_trainingCameraFragment"
+            app:destination="@id/trainingCameraFragment"
+            app:enterAnim="@anim/slide_enter_left"
+            app:exitAnim="@anim/slide_exit_left"
+            app:popExitAnim="@anim/slide_exit_down"
+            app:popUpTo="@id/mainFragment" />
+        <argument
+            android:name="exerciseId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingCameraFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.training.camera.TrainingCameraFragment"
+        android:label="fragment_training_camera"
+        tools:layout="@layout/fragment_training_camera">
+        <argument
+            android:name="trainingDay"
+            app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$TrainingDay" />
+        <argument
+            android:name="exerciseId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_trainingCameraFragment_to_trainingEndFragment"
+            app:destination="@id/trainingEndFragment"
+            app:popExitAnim="@anim/slide_exit_down"
+            app:popUpTo="@id/mainFragment" />
+        <action
+            android:id="@+id/action_trainingCameraFragment_to_preparationTrainingFragment"
+            app:destination="@id/preparationTrainingFragment"
+            app:enterAnim="@anim/slide_enter_left"
+            app:exitAnim="@anim/slide_exit_left"
+            app:popExitAnim="@anim/slide_exit_down"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainingEndFragment"
+        android:name="ru.dzyubamichael.pushupswithai.presentation.training.end.TrainingEndFragment"
+        android:label="fragment_training_end"
+        tools:layout="@layout/fragment_training_end">
+        <argument
+            android:name="trainingItem"
             app:argType="ru.dzyubamichael.pushupswithai.domain.TrainingDayEntity$TrainingDay" />
     </fragment>
 </navigation>
